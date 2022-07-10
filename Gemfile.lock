@@ -96,6 +96,8 @@ GEM
       warden (~> 1.2.3)
     digest (3.1.0)
     erubi (1.10.0)
+    esbuild-rails (0.1.4)
+      rails (>= 6.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -172,9 +174,12 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (4.7.1)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
+    requestjs-rails (0.0.9)
+      rails (>= 6.0.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -233,16 +238,19 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.8, >= 4.8.1)
+  esbuild-rails (~> 0.1.4)
   importmap-rails
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.3)
+  redis (~> 4.0)
+  requestjs-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
-  tzinfo-data
+  tzinfo-data (~> 1.2021, >= 1.2021.5)
   web-console
   webdrivers
 

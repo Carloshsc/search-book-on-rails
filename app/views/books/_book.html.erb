@@ -1,16 +1,26 @@
 <div id="<%= dom_id book %>">
-  <p>
-    <strong>Title:</strong>
+
+  <div class="each-book">
+
+      <% if book.cover_id %>
+       <%= image_tag book.cover_id, alt:"default_book.png", class: " rounded book-image" %>
+     <% else %>
+       <%= image_tag "default_book.png", class: "rounded book-image" %>
+      <% end %>
+
+
+  <h5>
+    
     <%= book.title %>
-  </p>
+  </h5>
 
   <p>
-    <strong>Author:</strong>
+    
     <%= book.author %>
   </p>
 
   <p>
-    <strong>Publication year:</strong>
+    
     <%= book.publication_year %>
   </p>
 
