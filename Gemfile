@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
+
+gem 'activestorage', '~> 7.0', '>= 7.0.3'
+
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -47,6 +50,8 @@ gem 'tzinfo-data', '~> 1.2021', '>= 1.2021.5'
 gem "bootsnap", require: false
 
 gem 'requestjs-rails'
+
+gem 'kaminari'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
