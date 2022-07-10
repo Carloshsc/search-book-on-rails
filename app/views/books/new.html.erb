@@ -1,13 +1,17 @@
 
-<div id="new-book" class="form-outline mt-4">
+
+<div id="new-book" class="form-outline mt-4" data-controller="books">
   <h1>New book</h1>
+
+
+
    <%= form_with model: @book, url: books_path do |form| %>
     
         
     <div class="new-book-form">
         <div class="form-title">
             <%= form.label :title, style: "display: block" %>
-            <%= form.text_field :title %>
+            <%= form.text_field :title, "data-action":"input->books#updateFilter" %>
         </div>
         <div class="form-author">
           <%= form.label :author , style: "display: block" %>
