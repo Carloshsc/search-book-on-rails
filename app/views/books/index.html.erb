@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
 
 <h1>Books</h1>
 
-<div id="books">
-  <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
-  <% end %>
+
+<div class="pages">
+  <%= paginate @books %>
 </div>
 
-<%= link_to "New book", new_book_path %>
+
+<div id="books" class="book-list">
+  <% @books.each do |book| %>
+  
+    <div class="container-book">
+
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book, :class=>"btn btn-primary rounded-pill mt-2 m-1 " %>
+    </p>
+    </div>
+  <% end %>  
+</div>
+

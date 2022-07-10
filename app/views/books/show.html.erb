@@ -1,17 +1,35 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @book %>
+<div class="show-book">
+      <% if @book.cover_id %>
+       <%= image_tag @book.cover_id, alt:"default_book.png", class: "card-img-left img-fluid me-3 rounded float-left book-image" %>
+     <% else %>
+       <%= image_tag "default_book.png", class: "img rounded float-left book-image" %>
+      <% end %>
 
-<div>
-  <%= link_to "Back to books", books_path %>
+      <div class="show-book-body"> 
+          <h5 class="show-book-title">
+            <%= @book.title %>
+          </h5>
+          <p class="show-book-author">
+            <%= @book.author %>
+          </p>
+          <small class="show-book-year">
+            <%= @book.publication_year %> 
+          </small>
+        </div>
 
-  <% if user_signed_in? %>
+  <div class="show-botton">
+    <%= link_to "Back to books", books_path, :class=>"btn btn-primary btn-lg rounded-pill mt-2 m-1" %>
 
-    <% if @book.user_id == current_user.id %>
+    <% if user_signed_in? %>
+
+      <% if @book.user_id == current_user.id %>
 
 
-      <%= link_to "Edit this book", edit_book_path(@book) %>
-      <%= button_to "Destroy this book", @book, method: :delete %>
+        <%= link_to "Edit this book", edit_book_path(@book), :class=>"btn btn-success btn-lg rounded-pill mt-2 m-1" %>
+        <%= button_to "Destroy this book", @book, method: :delete, :class=>"btn btn-danger btn-lg rounded-pill mt-2 m-1 " %>
+      <%end%>
     <%end%>
-  <%end%>
-</div>
+  </div>
+
+
