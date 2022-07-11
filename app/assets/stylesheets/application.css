@@ -193,3 +193,11 @@ body{
 .show-book .m-1 {
   margin: 1rem!important;
 }
+
+.form-author{
+  pointer-events: none;
+}
+
+.form-year{
+  pointer-events: none;
+}

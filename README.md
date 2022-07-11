@@ -1,24 +1,7 @@
-# README
+## Website that registers and shows books
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+run **docker-compose up** to start the project
 
-Things you may want to cover:
+On this site you can see all the books that have been registered and by logging in you can register your books, edit or delete them.
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
