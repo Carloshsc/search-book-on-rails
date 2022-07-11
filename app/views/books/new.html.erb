@@ -13,12 +13,12 @@
 
     <div class="form-author">
       <%= form.label :author , style: "display: block" %>
-      <%= form.text_field :author %>
+      <%= form.text_field :author, :disabled => true %>
     </div>
 
     <div class="form-year">
       <%= form.label :publication_year , style: "display: block" %>
-      <%= form.number_field :publication_year %>
+      <%= form.number_field :publication_year, :disabled => true %>
     </div>
         
     <%= form.text_field :cover_id,  type: "hidden" %>
