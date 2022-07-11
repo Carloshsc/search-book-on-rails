@@ -1,31 +1,36 @@
-
-
 <div id="new-book" class="form-outline mt-4" data-controller="books">
   <h1>New book</h1>
 
-
-
-   <%= form_with model: @book, url: books_path do |form| %>
-    
+  <%= form_with model: @book, url: books_path do |form| %>
         
-    <div class="new-book-form">
-        <div class="form-title">
-            <%= form.label :title, style: "display: block" %>
-            <%= form.text_field :title, "data-action":"input->books#updateFilter" %>
-        </div>
-        <div class="form-author">
-          <%= form.label :author , style: "display: block" %>
-          <%= form.text_field :author %>
-        </div>
-        <div class="form-year">
-          <%= form.label :publication_year , style: "display: block" %>
-          <%= form.number_field :publication_year %>
-        </div>
-        <%= form.submit  "Register Book", class:"btn btn-success rounded-pill mt-2 m-1"%>
-        </div>
-         <%= link_to "Cancel", books_path, :class=>"btn  btn-danger rounded-pill mt-2 m-1" %>
+  <div class="new-book-form">
+    <div class="form-title">
+          
+      <%= form.text_field :title, class: "dropdown-toggle form-control", href: "#", id: "book_title", role: "button", "data-toggle": "dropdown", "aria-expanded": "false", autocomplete: "off", "data-action":"input->books#searchBooks" %>
+      <ul id="find-book" class="dropdown-menu " aria-labelledby="search"></ul>
+
     </div>
 
+    <div class="form-author">
+      <%= form.label :author , style: "display: block" %>
+      <%= form.text_field :author %>
+    </div>
+
+    <div class="form-year">
+      <%= form.label :publication_year , style: "display: block" %>
+      <%= form.number_field :publication_year %>
+    </div>
+        
+    <%= form.text_field :cover_id,  type: "hidden" %>
+
+    <%= form.submit  "Register Book", class:"btn btn-success  mt-2 m-1"%>
+    </div>
+
+    <%= link_to "Cancel", books_path, :class=>"btn  btn-danger  mt-2 m-1" %>
+
+         
+  </div>
+
       
-   <% end %>
+  <% end %>
 </div>
